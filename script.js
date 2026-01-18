@@ -2,7 +2,7 @@ import * as THREE from "three";
 
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
-import { RGBELoader } from "three/addons/loaders/RGBELoader.js";
+import { HDRLoader } from "three/addons/loaders/HDRLoader.js";
 import GUI from "lil-gui";
 
 // GUI
@@ -50,9 +50,9 @@ if (!container) {
   );
 
   //RGBELoader
-  const rgbeLoader = new RGBELoader();
+  const hdrLoader = new HDRLoader();
 
-  rgbeLoader.load(
+  hdrLoader.load(
     "https://cdn.jsdelivr.net/gh/Igmald/webflowEclatDeThe@main/environmentMap.hdr",
     (texture) => {
       texture.mapping = THREE.EquirectangularReflectionMapping;
