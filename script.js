@@ -42,7 +42,7 @@ gltfLoader.load("https://cdn.jsdelivr.net/gh/Igmald/webflowEclatDeThe@main/Produ
 
 const hdrLoader = new HDRLoader();
 
-hdrLoader.load('/models/environmentMap.hdr', (hdr) => {
+hdrLoader.load('https://cdn.jsdelivr.net/gh/Igmald/webflowEclatDeThe@main/environmentMap.hdr', (hdr) => {
   hdr.mapping = THREE.EquirectangularReflectionMapping;
 
   // Rotation
