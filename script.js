@@ -24,7 +24,7 @@ let objects = {
 }
 
 // GLTFLoader
-gltfLoader.load("/models/Product-thea.glb", (gltf) => {
+gltfLoader.load("https://cdn.jsdelivr.net/gh/Igmald/webflowEclatDeThe@main/Product-thea.glb", (gltf) => {
   scene.add(gltf.scene);
 
   // Move objects
