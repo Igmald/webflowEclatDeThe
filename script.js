@@ -9,7 +9,7 @@ import GUI from 'lil-gui';
 // GUI
 const gui = new GUI()
 // Canvas
-const canvas = document.querySelector("canvas.webgl");
+const canvas = document.querySelector(".webgl");
 
 // Scene
 const scene = new THREE.Scene();
