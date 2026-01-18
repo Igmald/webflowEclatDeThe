@@ -49,23 +49,23 @@ if (!container) {
         if(objects.fumee) objects.fumee.position.x = 3;
     });
 
-    // --- CORRECTION 2 : UTILISER RGBELoader ---
-    // On utilise bien RGBELoader ici, pas HDRLoader
+    //RGBELoader
     const rgbeLoader = new RGBELoader();
 
     rgbeLoader.load('https://cdn.jsdelivr.net/gh/Igmald/webflowEclatDeThe@main/environmentMap.hdr', (texture) => {
         texture.mapping = THREE.EquirectangularReflectionMapping;
-        
-        // Scene environment
-        scene.environment = texture;
-        // scene.background = texture; // Optionnel si vous voulez voir le HDR en fond
+  // Rotation
+  hdr.rotation = Math.PI
 
-        // Rotation (Attention: environmentRotation n'existe pas sur scene en r128 standard, on tourne la texture)
-        // texture.rotation = Math.PI; // Ne marche pas directement sur la texture HDR en r128
+  scene.environment = hdr
+  const sceneRotation = Math.PI * 0.5
+  scene.environmentRotation.y = sceneRotation
+  scene.backgroundRotation.y = sceneRotation
+  // scene.background = hdr
     });
 
-    // Environment Intensity (Attention: n'existe pas en r128, c'est une feature récente r160+)
-    // Pour r128, on joue sur l'exposition du renderer
+scene.environmentIntensity = 1
+gui.add(scene, 'environmentIntensity', 0.1, 5, 0.01)
     
     // Lights
     const ambientLight = new THREE.AmbientLight("#ffffff", 0.1);
@@ -118,7 +118,7 @@ if (!container) {
 
         // Animations objects
         if (objects.original) {
-            objects.original.rotation.y = Math.sin(elapsedTime) * 0.002; // .rotation.y et pas rotateY pour être sûr
+            objects.original.rotateY(Math.sin(elapsedTime) * 0.002);
         }
 
         // Update controls
