@@ -125,7 +125,8 @@ if (!container) {
 
     // Animations objects
     if (objects.original) {
-      objects.original.rotateY(Math.sin(elapsedTime) * 0.002);
+        objects.original.rotateY(Math.sin(elapsedTime) * 0.001);
+        objects.original.position.y = -0.6 + Math.sin(elapsedTime) * 0.02;
     }
 
     // Update controls
