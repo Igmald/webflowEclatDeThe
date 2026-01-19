@@ -67,7 +67,7 @@ if (!container) {
     },
   );
 
-  scene.environmentIntensity = 1.32;
+  scene.environmentIntensity = 1.20;
   //gui.add(scene, "environmentIntensity", 0.1, 5, 0.01);
 
   // Lights
