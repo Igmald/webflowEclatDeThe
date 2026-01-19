@@ -3,10 +3,10 @@ import * as THREE from "three";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 import { HDRLoader } from "three/addons/loaders/HDRLoader.js";
-import GUI from "lil-gui";
+//import GUI from "lil-gui";
 
 // GUI
-const gui = new GUI();
+//const gui = new GUI();
 
 
 // container
@@ -67,8 +67,8 @@ if (!container) {
     },
   );
 
-  scene.environmentIntensity = 1;
-  gui.add(scene, "environmentIntensity", 0.1, 5, 0.01);
+  scene.environmentIntensity = 1.32;
+  //gui.add(scene, "environmentIntensity", 0.1, 5, 0.01);
 
   // Lights
   const ambientLight = new THREE.AmbientLight("#ffffff", 0.1);
@@ -102,8 +102,8 @@ if (!container) {
   // const orbitControls = new OrbitControls(camera, renderer.domElement);
 
   // ToneMapping
-  renderer.toneMapping = THREE.LinearToneMapping;
-  gui.add(renderer, "toneMapping", {
+  renderer.toneMapping = THREE.ACESFilmicToneMapping;
+  /*gui.add(renderer, "toneMapping", {
     no: THREE.NoToneMapping,
     linear: THREE.LinearToneMapping,
     reinhard: THREE.ReinhardToneMapping,
@@ -113,7 +113,7 @@ if (!container) {
 
   renderer.toneMappingExposure = 1;
   gui.add(renderer, "toneMappingExposure", 0, 2, 0.01);
-
+*/
   const clock = new THREE.Clock();
   let previousTime = 0;
 
