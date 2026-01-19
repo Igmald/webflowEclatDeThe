@@ -54,8 +54,8 @@ if (!container) {
 
   hdrLoader.load(
     "https://cdn.jsdelivr.net/gh/Igmald/webflowEclatDeThe@main/environmentMap.hdr",
-    (texture) => {
-      texture.mapping = THREE.EquirectangularReflectionMapping;
+    (hdr) => {
+      hdr.mapping = THREE.EquirectangularReflectionMapping;
       // Rotation
       hdr.rotation = Math.PI;
 
