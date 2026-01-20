@@ -12,7 +12,7 @@ import { DRACOLoader } from "three/addons/loaders/DRACOLoader.js";
 
 
 // container
-const container = document.querySelector(".webgl");
+const container = document.querySelectorAll(".webgl");
 
 // Verification div
 if (!container) {
