@@ -31,7 +31,7 @@ if (!container) {
 
   // GLTFLoader
   gltfLoader.load(
-    "https://cdn.jsdelivr.net/gh/Igmald/webflowEclatDeThe@main/Product-thea.glb",
+    "https://cdn.jsdelivr.net/gh/Igmald/webflowEclatDeThe@29345eef125436c72e541a2ae83b2a308e70cdec/Product-thea.glb",
     (gltf) => {
       scene.add(gltf.scene);
 
