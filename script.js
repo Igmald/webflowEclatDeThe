@@ -3,6 +3,8 @@ import * as THREE from "three";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 import { HDRLoader } from "three/addons/loaders/HDRLoader.js";
+import { DRACOLoader } from "three/addons/loaders/DRACOLoader.js";
+
 //import GUI from "lil-gui";
 
 // GUI
@@ -20,12 +22,15 @@ if (!container) {
   const scene = new THREE.Scene();
 
   // Models
+  //Draco
+  const dracoLoader = new DRACOLoader();
+  dracoLoader.setDecoderPath("https://www.gstatic.com/draco/versioned/decoders/1.5.7/");
+  //GLTF
   const gltfLoader = new GLTFLoader();
+  gltfLoader.setDRACOLoader(dracoLoader);
 
   // getObjects
   let objects = {
-    printaniere: null,
-    fumee: null,
     original: null,
   };
 
