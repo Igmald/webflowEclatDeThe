@@ -101,7 +101,7 @@ if (!container) {
   renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 
   // Canvas div webflow
-  container.appendChild(renderer.domElement);
+  //container.appendChild(renderer.domElement);
 
   // Controls
   // const orbitControls = new OrbitControls(camera, renderer.domElement);
