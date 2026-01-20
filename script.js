@@ -36,16 +36,16 @@ if (!container) {
       scene.add(gltf.scene);
 
       // Move objects
-      objects.printaniere = gltf.scene.getObjectByName("printemps");
-      objects.fumee = gltf.scene.getObjectByName("fumee");
+     // objects.printaniere = gltf.scene.getObjectByName("printemps");
+      //objects.fumee = gltf.scene.getObjectByName("fumee");
       objects.original = gltf.scene.getObjectByName("original");
 
       if (objects.original) {
         objects.original.position.x = -0.4;
         objects.original.position.y = -0.6;
       }
-      if (objects.printaniere) objects.printaniere.position.x = 2;
-      if (objects.fumee) objects.fumee.position.x = 3;
+     // if (objects.printaniere) objects.printaniere.position.x = 2;
+     // if (objects.fumee) objects.fumee.position.x = 3;
     },
   );
 
